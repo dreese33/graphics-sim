@@ -4,7 +4,7 @@ Playing around with a variety of Python libraries for cool physics and graphics 
 
 ## Virtual Environment Setup:
 
-To setup a python virtual environment, you can run the following command:<br / >
+To setup a python virtual environment, you can run the following command:<br />
 `python -m venv /path/to/env`
 
 Once complete, the environment can be activated via:<br />
