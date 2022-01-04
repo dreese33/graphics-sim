@@ -1,32 +1,32 @@
-from vpython import *
-import numpy as np
-
+""" Animations involving polynomials """
+import vpython as vp
+# import numpy as np
 
 def create_origin_line():
-  """
-  Line with first point, beginning at the origin of the graph
-  """
-  moving_line = curve()
-  moving_line.append(
-    vector(0, 0, 0),
-  )
-
-  return moving_line
-
-
-def draw_parabola_animation(a, b, c, totalPts = 5):
-  """
-  Equation for a parabola:
-  y = ax^2 + bx + c
-  """
-  moving_line = create_origin_line()
-
-  for x in range(0, totalPts):
-    rate(5)
-    y = a*x*x + b*x + c
+    """
+    Line with first point, beginning at the origin of the graph
+    """
+    moving_line = vp.curve()
     moving_line.append(
-      vector(x, y, 0)
+        vp.vector(0, 0, 0),
     )
+
+    return moving_line
+
+
+def draw_parabola_animation(a, b, c, total_pts = 5):
+    """
+    Equation for a parabola:
+    y = ax^2 + bx + c
+    """
+    moving_line = create_origin_line()
+
+    for x in range(0, total_pts):
+        vp.rate(5)
+        y = a*x*x + b*x + c
+        moving_line.append(
+            vp.vector(x, y, 0)
+        )
 
 
 # def draw_mandelbrot_animation(C, totalPts = 10):
